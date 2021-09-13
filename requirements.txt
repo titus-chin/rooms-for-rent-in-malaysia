@@ -1,0 +1,13 @@
+# local package
+-e .
+
+# external requirements
+docutils<0.16
+Sphinx
+sphinx-rtd-theme
+numpydoc
+pytest
+black
+pre-commit
+pyyaml
+awscli
