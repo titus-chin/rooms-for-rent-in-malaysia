@@ -22,7 +22,12 @@
     $ pip3 install -r requirements.txt
     ```
 
-5. Project specific instructions such as:
-- how to get data
-- what environment variables should they create
-- how to create app
+5. Scrape rental lists from roomz.asia.
+    ```bash
+    $ python3 src/data/rental_scraper.py
+    ```
+
+6. Run streamlit app locally.
+    ```bash
+    $ streamlit run app.py
+    ```

@@ -62,6 +62,18 @@ delete-project:
 	rm -r ~/.virtualenvs/$(PROJECT_NAME)
 	sudo rm -r ~/Documents/github/$(PROJECT_NAME)
 
+.PHONY: scrape-data
+## Scrape rental lists from roomz.asia.
+scrape-data:
+	python3 src/data/rental_scraper.py
+	$(MAKE) clean
+
+.PHONY: streamlit
+## Run streamlit app locally.
+streamlit:
+	streamlit run app.py
+	$(MAKE) clean
+
 #################################################################################
 # Self Documenting Commands                                                     #
 #################################################################################

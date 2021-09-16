@@ -22,9 +22,8 @@ def check_urls(content):
 
 
 def get_contents(content, dict, country_code, min_rent, max_rent):
-    """Check if the rental list is updated with affordable price
-    ranging from RM 200 to RM 1500. Append area, location, rent,
-    headline and link of valid lists to a dictionary.
+    """Check if the rental list is updated and affordable. Append area,
+    location, rent, headline and link of valid lists to a dictionary.
 
     Parameters
     ----------
@@ -32,6 +31,12 @@ def get_contents(content, dict, country_code, min_rent, max_rent):
         Json data obtained from the urls.
     dict : collections.defaultdict
         Dictionary that stores all the scraped contents.
+    country_code : str
+        Country code used in roomz.asia url, either sg or my.
+    min_rent : int or float
+        Minimum rent to scrape.
+    max_rent : int or float
+        Maximum rent to scrape.
     """
     last_year = date.today().year - 1
     for list in content["data"]["lists"]:

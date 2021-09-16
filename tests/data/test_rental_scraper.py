@@ -1,4 +1,3 @@
-from src.data.utils import get_project_root
 from src.data.rental_scraper import main
 import pandas as pd
 import os

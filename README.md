@@ -1,5 +1,5 @@
 # Rooms for Rent in Malaysia
-> The purpose of this project is to create a web app listing affordable rooms for rent in Malaysia. The rental lists are scraped from roomz.asia, and the data is updated daily. Web app can be found [here]().
+> The purpose of this project is to create a web app listing affordable rooms for rent in Malaysia. The rental lists are scraped from [roomz.asia](https://my.roomz.asia/), and the data is updated daily. Web app can be found [here]().
 #### -- Project Status: Active
 
 ## Table of Contents
@@ -42,7 +42,7 @@
     |
     ├── activate.sh        <- Shell script to activate the virtual environment
     |
-    ├── app.py             <- Script to create a web app / dashboard
+    ├── app.py             <- Script to create a web app
     |
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment
     |
@@ -51,45 +51,27 @@
     └── tox.ini            <- Tox file with settings for running tox for unit testing
 
 ## Methods Used
-- Logistic Regression
 - Web Scraping
-- Method 3
 
 ## Technologies
 - Python - version 3.8.10
-    - Scrapy - version 1.0
-    - Pandas - version 2.0
+    - Scrapy - version 2.5.0
+    - Streamlit - version 0.88.0
 - GNU Make - version 4.2.1
 - Streamlit Cloud
-- Weights & Biases
 - AWS S3
-- Tech 6 - version 3.0
 
 ## Project Description
-- intro
-    - Background? Problem statement?
-    - What motivate you? What you want to learn?
-    - What is the purpose of your project?
-    - ML problem framing? Given blah blah, predict blah blah?
-- data
-    - Data source? How to get the data?
-    - Data description?
-    - Data dictionary can be found [here](references/data_dictionary.md).
-- Experiment setup
-    - Selected evaluation metrics?
-    - train test split method? k-fold cross validation? percentage split?
-    - which packages to create models? scikit-learn? keras?
-    - Baseline classifer? Other models should perform better than baseline classifier.
-    - how many models? What are them?
-    - How to tune the model? Grid search? random search? wandb? Model summary can be found [here](models/model_summary.md).
-    - Best model is chosen based on evaluation metrics.
+People will need to rent rooms for various reasons, some need a room for a new job, some need a room to further study, and I might need a room for my postgraduate internship soon. Therefore, I decided to create a web app to list down affordable rooms for rent in Malaysia to help those who need a room in Malaysia including future me.
+
+The rental lists are scraped from [roomz.asia](https://my.roomz.asia/). According to its website, roomz.asia is a property rental website with hundreds of new listings added daily. Because of that, the data of this web app will be updated daily. To make it simple, I will only scrape the location of the rooms, the headline and the link of rental posts, and rent per month in Ringgit Malaysia (RM). Data dictionary can be found [here](references/data_dictionary.md).
+
+Scrapy is used to scrape the rental lists, and streamlit is used to create a web app. The web app is deployed on Streamlit Cloud with AWS S3 as its data storage.
 
 ## Results
-- What is the best performing model? Why?
-- Interpretation of results?
-- Discussion? Conclusion?
-- Improvement?
-- Outcome of the project? [Web app/Dashboard](link)
+A simple web app can be found [here](). The rental lists covered 13 areas in Malaysia namely Sabah, Selangor, Pahang, Johor, Kelantan, Kuala Lumpur, Melaka, Negeri Sembilan, Penang, Sarawak, Perak, Kedah and Terengganu. These data are sorted by rent in ascending order. The rent is ranging from RM200 per month to RM1500 per month. All rental lists will be updated daily.
+
+To improve this web app, we can include other attributes such as does the room has private bathroom? So far this web app is just focusing on single rooms for rent, not including whole units for rent yet. Therefore, this is another thing we can consider in the future.
 
 ## Getting Started
 Follow [these instructions](references/getting_started.md) to reproduce this project.

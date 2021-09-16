@@ -42,12 +42,14 @@ today_date = date.today()
 st.write(f"Updated at {today_date}")
 data_load_state = st.text("Loading data...")
 data = load_data(today_date)
-
 area = st.sidebar.radio("Select area:", options=set(data.index), index=0)
 location = st.sidebar.multiselect(
     "Select location:",
     options=get_location_options(data, area, today_date),
     default=get_location_options(data, area, today_date)[0],
+)
+st.sidebar.markdown(
+    "Source code can be found [here](https://github.com/titus-chin/rooms-for-rent-in-malaysia). Created by [Titus Chin](https://www.linkedin.com/in/titus-chin-jun-hong/), feel free to contact me!"
 )
 selected_data = select_data(data, area, location, today_date)
 st.write(
