@@ -6,7 +6,7 @@ from src.data.utils import get_project_root, load_config
 from src.data.preprocessing import check_urls, get_contents, get_next_page
 
 
-def main(base_url, country_code, areas, min_rent, max_rent, output_file):
+def main(base_url, country_code, areas, min_rent, max_rent, output_path):
     """Pipeline to scrape Malaysia rental lists from website
     roomz.asia. Append contents of valid rental lists to a dictionary,
     then write the data to a csv file.
@@ -41,16 +41,17 @@ def main(base_url, country_code, areas, min_rent, max_rent, output_file):
     process.crawl(Rental_Spider)
     process.start()
     rental_df = pd.DataFrame(rental_dict)
-    rental_df.to_csv(get_project_root().joinpath("data", output_file), index=False)
+    rental_df.to_csv(output_path, index=False)
 
 
 if __name__ == "__main__":
     conf = load_config("conf", "parameters", "data.yaml")
+    output_path = get_project_root().joinpath("data", conf["output_file"])
     main(
         base_url=conf["base_url"],
         country_code=conf["country_code"],
         areas=conf["areas"],
         min_rent=conf["min_rent"],
         max_rent=conf["max_rent"],
-        output_file=conf["output_file"],
+        output_path=output_path,
     )

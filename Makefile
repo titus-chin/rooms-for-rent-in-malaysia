@@ -36,7 +36,7 @@ clean:
 .PHONY: test
 ## Test source code
 test:
-	cd tests/ && pytest
+	pytest
 	$(MAKE) clean
 
 .PHONY: docs
