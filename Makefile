@@ -74,6 +74,17 @@ streamlit:
 	streamlit run app.py
 	$(MAKE) clean
 
+.PHONY: update
+## Update rental lists and web app.
+update:
+	source activate.sh && \
+	$(MAKE) scrape-data && \
+	$(MAKE) sync-data-to-s3
+	git add .
+	git commit -m "daily update"
+	git push
+	$(MAKE) clean
+
 #################################################################################
 # Self Documenting Commands                                                     #
 #################################################################################

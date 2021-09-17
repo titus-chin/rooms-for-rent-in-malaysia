@@ -1,5 +1,5 @@
 # Rooms for Rent in Malaysia
-> The purpose of this project is to create a web app listing affordable rooms for rent in Malaysia. The rental lists are scraped from [roomz.asia](https://my.roomz.asia/), and the data is updated daily. Web app can be found [here]().
+> The purpose of this project is to create a web app listing affordable rooms for rent in Malaysia. The rental lists are scraped from [roomz.asia](https://my.roomz.asia/), and the data is updated daily. Web app can be found [here](https://share.streamlit.io/titus-chin/rooms-for-rent-in-malaysia/main/app.py).
 #### -- Project Status: Active
 
 ## Table of Contents
@@ -69,7 +69,7 @@ The rental lists are scraped from [roomz.asia](https://my.roomz.asia/). Accordin
 Scrapy is used to scrape the rental lists, and streamlit is used to create a web app. The web app is deployed on Streamlit Cloud with AWS S3 as its data storage.
 
 ## Results
-A simple web app can be found [here](). The rental lists covered 13 areas in Malaysia namely Sabah, Selangor, Pahang, Johor, Kelantan, Kuala Lumpur, Melaka, Negeri Sembilan, Penang, Sarawak, Perak, Kedah and Terengganu. These data are sorted by rent in ascending order. The rent is ranging from RM200 per month to RM1500 per month. All rental lists will be updated daily.
+A simple web app can be found [here](https://share.streamlit.io/titus-chin/rooms-for-rent-in-malaysia/main/app.py). The rental lists covered 13 areas in Malaysia namely Sabah, Selangor, Pahang, Johor, Kelantan, Kuala Lumpur, Melaka, Negeri Sembilan, Penang, Sarawak, Perak, Kedah and Terengganu. These data are sorted by rent in ascending order. The rent is ranging from RM200 per month to RM1500 per month. All rental lists will be updated daily.
 
 To improve this web app, we can include other attributes such as does the room has private bathroom? So far this web app is just focusing on single rooms for rent, not including whole units for rent yet. Therefore, this is another thing we can consider in the future.
 

@@ -98,3 +98,6 @@ conf/credentials/wandb.yaml
 
 # Streamlit secret
 .streamlit
+
+# Update script
+update.sh
