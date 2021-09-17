@@ -5,7 +5,7 @@ The data is scraped from [roomz.asia](https://my.roomz.asia/). It has 5 attribut
 
 | Attributes                | Data Types      | Descriptions                                                            |
 | ------------------------- | --------------- | ----------------------------------------------------------------------- | 
-| Area                      | str             | Area of the rooms such as Kuala Lumpur, Johor, etc.                     |
+| Area                      | str             | Area where the rooms belong to such as Kuala Lumpur, Johor, etc.        |
 | Location                  | str             | Location of the rooms such as Kepong, Johor Bahru, etc.                 |
 | Rent (RM/month)           | int             | Rent per month in Ringgit Malaysia (RM).                                |
 | Headline                  | str             | Headline of each rental post.                                           |

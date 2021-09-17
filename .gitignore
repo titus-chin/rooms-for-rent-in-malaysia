@@ -95,3 +95,6 @@ target/
 
 # Credentials
 conf/credentials/wandb.yaml
+
+# Streamlit secret
+.streamlit
