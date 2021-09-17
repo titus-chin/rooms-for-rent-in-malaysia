@@ -22,8 +22,6 @@ def load_data(date):
     pandas.DataFrame
     """
     try:
-        input_path = f"{Path.cwd().joinpath('data', conf['input_file'])}"
-    except:
         client = boto3.client(
             "s3",
             aws_access_key_id=st.secrets["aws_access_key_id"],
@@ -32,6 +30,9 @@ def load_data(date):
         )
         obj = client.get_object(Bucket=st.secrets["bucket"], Key=st.secrets["key"])
         input_path = obj["Body"]
+    except:
+        input_path = f"{Path.cwd().joinpath('data', conf['input_file'])}"
+
     data = pd.read_csv(input_path)
     data.sort_values(conf["sort_by"], inplace=True)
     data.set_index(conf["index"], drop=True, inplace=True)
