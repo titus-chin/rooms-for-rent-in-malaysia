@@ -7,7 +7,7 @@ class TestMain:
     def test_on_main_pipeline(self):
         base_url = "https://{}.roomz.asia/api?c=Rooms&a=getAsyncDataForListPage&area={}&rentalType=3&page=1"
         country_code = "my"
-        areas = ["kelantan"]
+        areas = ["melaka"]
         min_rent = 200
         max_rent = 1500
         output_file = "test_malaysia_rental_lists.csv"
