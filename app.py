@@ -9,7 +9,7 @@ import _thread
 
 @st.cache(hash_funcs={_thread.RLock: id})
 def load_data(date):
-    """Load rental data to web app either from local machine or AWS S3
+    """Load rental data to web app either from github or AWS S3
     bucket.
 
     Parameters
