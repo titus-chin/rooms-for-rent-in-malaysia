@@ -31,7 +31,7 @@ def load_data(date):
         obj = client.get_object(Bucket=st.secrets["bucket"], Key=st.secrets["key"])
         input_path = obj["Body"]
     except:
-        input_path = f"{Path.cwd().joinpath('data', conf['input_file'])}"
+        input_path = "https://raw.githubusercontent.com/titus-chin/rooms-for-rent-in-malaysia/main/data/malaysia_rental_lists.csv"
 
     data = pd.read_csv(input_path)
     data.sort_values(conf["sort_by"], inplace=True)
